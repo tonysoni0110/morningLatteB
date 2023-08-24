@@ -41,7 +41,8 @@ app.post('/api/website', async (req, res) => {
     const transformedElements = elements.map(el => {
       const classname = el.classname || '';
       const content = el.content || '';
-      return { classname, content, icons: el.icons };
+      const parent = el.parent || '';
+      return { classname, content, icons: el.icons, parent };
     });
 
     // Find the website document or create a new one if it doesn't exist

@@ -6,6 +6,7 @@ const websiteSchema = new mongoose.Schema({
   elements: [
     {
       classname: { type: String },
+      parent: {type: String},
       content: {type: String},
       icons: { type: String, required: true },
     },
